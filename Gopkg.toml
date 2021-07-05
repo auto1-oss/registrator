@@ -5,12 +5,17 @@
   version = "2.0.0"
 
 [[constraint]]
+<<<<<<< HEAD
   name = "github.com/hashicorp/consul"
   version = "1.0.7"
 
 [[constraint]]
   branch = "master"
   name = "github.com/hashicorp/go-cleanhttp"
+=======
+  name = "github.com/fsouza/go-dockerclient"
+  version = "1.6.5"
+>>>>>>> b2d10dd (Got data from consul)
 
 [[constraint]]
   name = "github.com/fsouza/go-dockerclient"
@@ -29,6 +34,7 @@
   name = "github.com/samuel/go-zookeeper"
 
 [[constraint]]
+<<<<<<< HEAD
   branch = "master"
   name = "github.com/gliderlabs/pkg"
 
@@ -48,6 +54,11 @@
 
 # prune
 
+=======
+  name = "github.com/stretchr/testify"
+  version = "1.2.1"
+
+>>>>>>> b2d10dd (Got data from consul)
 [prune]
   go-tests = true
   unused-packages = true

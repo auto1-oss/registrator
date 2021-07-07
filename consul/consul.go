@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
-
+  
 	"github.com/gliderlabs/registrator/bridge"
 	consulapi "github.com/hashicorp/consul/api"
 	"github.com/hashicorp/go-cleanhttp"
@@ -87,16 +87,6 @@ func (r *ConsulAdapter) Register(service *bridge.Service) error {
 	registration.Address = service.IP
 	registration.Check = r.buildCheck(service)
 	registration.Meta = service.Attrs
-
-	//	log.Println("consul: ", service, service.ID, service.Name, service.Port, service.Tags, service.IP)
-	//	log.Println("service.ID: ", service.ID)
-	//	log.Println("service.Name: ", service.Name)
-	//	log.Println("service.Port: ", service.Port)
-	//	log.Println("Service.ContainerID: ", service.ContainerID)
-	//	log.Println("Tags: ", service.Tags)
-	//	log.Println("service.IP: ", service.IP)
-	//	log.Println("service.Nodename: ", service.Nodename)
-	//	go log.Println(r.client.Health().Checks(service.Name, nil))
 	return r.client.Agent().ServiceRegister(registration)
 }
 
@@ -115,7 +105,6 @@ func (r *ConsulAdapter) GetStatus(service *bridge.Service) error {
 	fmt.Printf("%+v\n", ServiceHealthCheck)
 	log.Println(reflect.TypeOf(ServiceHealthCheck).String())
 	//	influxdb.WriteData(string(service.Name), string(service.ContainerID), string(service.Nodename), string(service.Port))
-	return r.client.Agent().ServiceRegister(registration)
 }
 
 func (r *ConsulAdapter) buildCheck(service *bridge.Service) *consulapi.AgentServiceCheck {

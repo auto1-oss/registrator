@@ -6,6 +6,7 @@
 
 [[constraint]]
 <<<<<<< HEAD
+<<<<<<< HEAD
   name = "github.com/hashicorp/consul"
   version = "1.0.7"
 
@@ -16,6 +17,10 @@
   name = "github.com/fsouza/go-dockerclient"
   version = "1.6.5"
 >>>>>>> b2d10dd (Got data from consul)
+=======
+  name = "github.com/fsouza/go-dockerclient"
+  version = "v1.6.5"
+>>>>>>> f8c3c48b0f5359eb5bf2e2ecb709bdb533ac1c50
 
 [[constraint]]
   name = "github.com/fsouza/go-dockerclient"
@@ -34,6 +39,7 @@
   name = "github.com/samuel/go-zookeeper"
 
 [[constraint]]
+<<<<<<< HEAD
 <<<<<<< HEAD
   branch = "master"
   name = "github.com/gliderlabs/pkg"
@@ -59,6 +65,11 @@
   version = "1.2.1"
 
 >>>>>>> b2d10dd (Got data from consul)
+=======
+  name = "github.com/stretchr/testify"
+  version = "1.2.1"
+
+>>>>>>> f8c3c48b0f5359eb5bf2e2ecb709bdb533ac1c50
 [prune]
   go-tests = true
   unused-packages = true

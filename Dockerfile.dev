@@ -3,8 +3,14 @@ CMD ["/bin/registrator"]
 
 COPY . /go/src/github.com/gliderlabs/registrator
 RUN apk --no-cache add -t build-deps build-base go git curl \
+<<<<<<< HEAD
 	&& apk --no-cache add ca-certificates \
 	&& export GOPATH=/go && mkdir -p /go/bin && export PATH=$PATH:/go/bin \
+=======
+	&& apk --no-cache add ca-certificates
+
+RUN export GOPATH=/go && mkdir -p /go/bin && export PATH=$PATH:/go/bin \
+>>>>>>> f8c3c48b0f5359eb5bf2e2ecb709bdb533ac1c50
 	&& curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh \
 	&& cd /go/src/github.com/gliderlabs/registrator \
 	&& export GOPATH=/go \

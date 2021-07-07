@@ -114,6 +114,7 @@ func (r *ConsulAdapter) GetStatus(service *bridge.Service) error {
 	ServiceHealthCheck, _, _ := r.client.Health().Checks(service.Name, nil)
 	fmt.Printf("%+v\n", ServiceHealthCheck)
 	log.Println(reflect.TypeOf(ServiceHealthCheck).String())
+	//	influxdb.WriteData(string(service.Name), string(service.ContainerID), string(service.Nodename), string(service.Port))
 	return r.client.Agent().ServiceRegister(registration)
 }
 
